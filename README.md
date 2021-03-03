@@ -4,11 +4,7 @@ Some scripts to aggregate antibody sequences and results metadata from:
 
 Vázquez Bernat, Néstor et al.  Rhesus and cynomolgus macaque immunoglobulin heavy-chain genotyping yields comprehensive databases of germline VDJ alleles.  Immunity, Volume 54, Issue 2, 355 - 366.e4 <https://doi.org/10.1016/j.immuni.2020.12.018>
 
-Final allele sequences, straight from the source:
-
- * http://kimdb.gkhlab.se/datasets/Macaca%20mulatta/Ig/Heavy/V/
- * http://kimdb.gkhlab.se/datasets/Macaca%20mulatta/Ig/Heavy/D/
- * http://kimdb.gkhlab.se/datasets/Macaca%20mulatta/Ig/Heavy/J/
+Final allele sequences, straight from the source: <http://kimdb.gkhlab.se/datasets/>
 
 GenBank accession ranges, for final allele sequences:
 
@@ -24,8 +20,7 @@ ENA accession ranges, for read libraries:
  * ERR4250665-ERR4250672
  * ERR4238026-ERR4238115
 
-
-## S5
+## Table S5
 
  * S5A: IGHV (all)
  * S5B: IGHV (rhesus)
