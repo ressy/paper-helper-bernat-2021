@@ -1,5 +1,13 @@
 #!/usr/bin/env python
 
+"""
+Convert the sheets in the Table S5 workbook into CSV files.
+
+The side-by-side blocks of cells for the first three sheets are rearranged into
+a one-row-per-allele layout and the black/white boxes are converted to "T"/"F"
+text values.
+"""
+
 import sys
 import csv
 from pathlib import Path
