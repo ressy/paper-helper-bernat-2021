@@ -1,0 +1,54 @@
+LOCUS       MT643227                 296 bp    mRNA    linear   PRI 08-FEB-2021
+DEFINITION  Macaca mulatta clone IGHV4-149*01_S1940 immunoglobulin heavy chain
+            variable region (IGH) mRNA, partial cds.
+ACCESSION   MT643227
+VERSION     MT643227.1
+KEYWORDS    .
+SOURCE      Macaca mulatta (Rhesus monkey)
+  ORGANISM  Macaca mulatta
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Cercopithecidae; Cercopithecinae; Macaca.
+REFERENCE   1  (bases 1 to 296)
+  AUTHORS   Vazquez Bernat,N., Corcoran,M., Nowak,I., Kaduk,M., Castro
+            Dopico,X., Narang,S., Maisonasse,P., Dereuddre-Bosquet,N.,
+            Murrell,B. and Karlsson Hedestam,G.B.
+  TITLE     Rhesus and cynomolgus macaque immunoglobulin heavy-chain genotyping
+            yields comprehensive databases of germline VDJ alleles
+  JOURNAL   Immunity (2021) In press
+   PUBMED   33484642
+  REMARK    Publication Status: Available-Online prior to print
+REFERENCE   2  (bases 1 to 296)
+  AUTHORS   Vazquez Bernat,N., Corcoran,M., Nowak,I., Kaduk,M., Castro
+            Dopico,X., Narang,S., Murrell,B. and Karlsson Hedestam,G.B.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (17-JUN-2020) Department of Microbiology, Tumor and Cell
+            Biology, Karolinska Institutet, Solnavagen 9, Solna, Stockholm 171
+            65, Sweden
+COMMENT     ##Assembly-Data-START##
+            Assembly Method       :: PEAR v. 0.9.6; IgDiscover v. 03-04-2020
+            Sequencing Technology :: Illumina
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..296
+                     /organism="Macaca mulatta"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:9544"
+                     /clone="IGHV4-149*01_S1940"
+     gene            <1..>296
+                     /gene="IGH"
+     CDS             <1..>296
+                     /gene="IGH"
+                     /codon_start=1
+                     /product="immunoglobulin heavy chain variable region"
+                     /protein_id="QRF81529.1"
+                     /translation="QVQLQESGPGLVKPSETLSLTCTVSGASISSYWWSWIRQPPGKG
+                     LEWIGEINGNSGSTNYNPSLKSRVTISKDASKNQFSLKLSSVTAADTAVYYCAR"
+ORIGIN      
+        1 caggtgcagc tgcaggagtc gggcccagga ctggtgaagc cttcggagac cctgtccctc
+       61 acctgcactg tctctggtgc ctccatcagt agttactggt ggagctggat ccgccagccc
+      121 ccagggaagg gactggagtg gattggggag attaatggta atagtgggag caccaactac
+      181 aacccctccc tcaagagtcg agtcaccatt tcaaaagacg cgtccaagaa ccagttctcc
+      241 ctgaagctga gctctgtgac cgccgcggac acggcggtgt attactgtgc gagaga
+//
+

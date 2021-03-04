@@ -5,8 +5,14 @@ HTTP = HTTPRemoteProvider()
 wildcard_constraints:
     segment="[VDJ]"
 
-rule all:
-    input: expand("output/{segment}.csv", segment = ["V", "D", "J"])
+rule combine_output:
+    output: "output/alleles.csv"
+    input:
+        v="output/V.csv",
+        d="output/D.csv",
+        j="output/J.csv",
+        gbf="from-genbank/MT643227.1.gbf" # To fill in missing entry for IGHV4-149*01_S1940
+    shell: "./scripts/combine_all.py {input.v} {input.d} {input.j} {input.gbf} {output}"
 
 rule gather_alleles_V:
     output: "output/V.csv"
@@ -16,6 +22,7 @@ rule gather_alleles_V:
         fasta_cynomolgus="from-website/cynomolgus.V.fasta",
         validated_rhesus="from-paper/tableS4_rhesus.txt",
         validated_cynomolgus="from-paper/tableS4_cynomolgus.txt"
+    # (Could also explicitly double-check S5A versus S5B + S5C, but they do match up.)
     shell: "./scripts/gather.py {input.csv} {input.fasta_rhesus} {input.fasta_cynomolgus} {input.validated_rhesus} {input.validated_cynomolgus} {output}"
 
 rule gather_alleles_D:
