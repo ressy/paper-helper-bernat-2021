@@ -14,6 +14,11 @@ rule combine_output:
         gbf="from-genbank/MT643227.1.gbf" # To fill in missing entry for IGHV4-149*01_S1940
     shell: "./scripts/combine_all.py {input.v} {input.d} {input.j} {input.gbf} {output}"
 
+rule output_rhesus_fasta_by_segment:
+    output: "output/rhesus_alleles.{segment}.fasta"
+    input: "output/alleles.csv"
+    shell: "./scripts/csv_to_fasta_rhesus.py {wildcards.segment} {input} {output}"
+
 rule gather_alleles_V:
     output: "output/V.csv"
     input:
