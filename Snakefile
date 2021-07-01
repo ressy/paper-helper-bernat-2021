@@ -2,7 +2,7 @@ from snakemake.remote.HTTP import RemoteProvider as HTTPRemoteProvider
 
 from csv import DictReader
 
-with open("SraRunTable.txt") as f_in:
+with open("SraRunTable.csv") as f_in:
     reader = DictReader(f_in)
     SRA = list(reader)
 
