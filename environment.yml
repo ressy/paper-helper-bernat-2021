@@ -7,3 +7,4 @@ dependencies:
   - openpyxl
   - biopython
   - snakemake
+  - sra-tools

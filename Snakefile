@@ -1,5 +1,11 @@
 from snakemake.remote.HTTP import RemoteProvider as HTTPRemoteProvider
 
+from csv import DictReader
+
+with open("SraRunTable.txt") as f_in:
+    reader = DictReader(f_in)
+    SRA = list(reader)
+
 HTTP = HTTPRemoteProvider()
 
 wildcard_constraints:
@@ -64,3 +70,10 @@ rule download_segment_cynomolgus:
     input: HTTP.remote("http://kimdb.gkhlab.se/datasets/Macaca%20fascicularis/Ig/Heavy/{segment}")
     output: "from-website/cynomolgus.{segment}.fasta"
     shell: "cp {input} {output}"
+
+rule all_sra_fastq:
+    input: expand("from-sra/{srr}_{rp}.fastq.gz", srr=[row["Run"] for row in SRA], rp=[1, 2])
+
+rule sra_fastq:
+    output: expand("from-sra/{{srr}}_{rp}.fastq.gz", rp=[1, 2])
+    shell: "fastq-dump  --split-files --gzip {wildcards.srr} --outdir from-sra"

@@ -27,8 +27,6 @@ ENA accession ranges, for read libraries:
  * ERR4250665-ERR4250672
  * ERR4238026-ERR4238115
 
-(Not using those here either.)
-
 ### Tables
 
 Used here:
